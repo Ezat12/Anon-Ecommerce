@@ -1414,7 +1414,7 @@ nav .container .input-form button:hover {
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
-  max-width: 500px;
+  max-width: 400px;
   background-color: #fff;
 
   width: 100%;
@@ -1618,6 +1618,24 @@ nav .container .input-form button:hover {
 }
 .plateform li .drop ul li:not(:last-child) {
   border-bottom : 1px solid #eee;
+}
+.icons-plate a {
+  text-decoration: none;
+  background-color: var(--gray-bg-color);
+  color: var(--gray-color);
+  padding: 3px 7px;
+  cursor: pointer;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  font-weight: 600;
+  font-size: 20px;
+}
+.icons-plate a:hover {
+  background-color: var(--main-color);
+  color: #fff;
 }
 /* End navbar-mobile*/
 
