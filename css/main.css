@@ -539,9 +539,9 @@ nav .container .input-form button:hover {
     min-width: calc(100% - 15px);
   }
 }
-.show-prodect .container .prodect .box-prodect .content {
+/* .show-prodect .container .prodect .box-prodect .content {
 
-}
+} */
 .show-prodect .container .prodect .box-prodect .content .image {
   background-color: var(--gray-bg-color);
   padding: 15px;
@@ -756,6 +756,7 @@ nav .container .input-form button:hover {
   position: absolute;
   top: 50%;
   font-size: 20px;
+  cursor: pointer;
 }
 .prodect-deal .show-prodects .left {
   left: -10px;
@@ -999,9 +1000,9 @@ nav .container .input-form button:hover {
   -ms-transform: scale(1.0111);
   -o-transform: scale(1.0111);
 }
-.new-prodect .showcases .content {
-  /* text-align: center; */
-}
+/* .new-prodect .showcases .content {
+  text-align: center;
+} */
 .new-prodect .showcases .content .namecon {
   color: var(--main-color);
   margin-bottom: 10px;
@@ -1335,6 +1336,7 @@ nav .container .input-form button:hover {
   width: 1px;
   height: calc(100% - 5px);
   background-color: #787878;
+  transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -1400,6 +1402,7 @@ nav .container .input-form button:hover {
 
 /* Start Menu Mobile*/
 .menu-mobile {
+  z-index: 200;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1413,7 +1416,7 @@ nav .container .input-form button:hover {
   -o-transform: translateX(-50%);
   max-width: 500px;
   background-color: #fff;
-  z-index: 6;
+
   width: 100%;
   border-radius: 10px;
   height: 50px;

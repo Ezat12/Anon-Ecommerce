@@ -1,5 +1,25 @@
 {
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "script": "build",
+    "start": "node main.js"
+  },
   "dependencies": {
-    "bootstrap": "^5.3.2"
-  }
+    "bootstrap": "^5.3.2",
+    "gh": "^2.8.9",
+    "pages": "^0.0.16"
+  },
+  "name": "final-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "homepage": "http://Ezat12.githud.io/Anon-Ecommerce",
+    "coffee-script": "^1.6.3",
+    "mocha": "^1.9.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
