@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anon</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Courier+Prime:ital@1&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&family=Permanent+Marker&family=Poppins:ital,wght@0,200;0,500;0,900;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="overlay "></div>
+
+  <!-- Start Model -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+          <button type="button" id = "btn-close" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3 d-flex flex-column">
+            <label class="mb-2" for="input-name">name:</label>
+            <input class="form-control" id="input-name" type="text" placeholder="Enter You name">
+          </div>
+          <div class="mb-3 d-flex flex-column">
+            <label class="mb-2" for="input-password">password:</label>
+            <input class="form-control" id="input-password" type="password" placeholder="Enter You password">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="loginClick()">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Model -->
+
+  <!-- Alert -->
+  <div class="alert alert-danger main-alert position-absolute" role="alert">
+    Please Enter You <span>Name</span>!
+  </div>
+  <!-- Alert -->
+
+  <nav class="border-bottom border-gray">
+    <div class="container p-2 d-flex align-items-center justify-content-between">
+      <div class="icons d-lg-flex align-items-center gap-2 d-none">
+        <a class="rounded" href="https://www.facebook.com/ezat.elberry?locale=ar_AR"><i class="fa-brands fa-facebook"></i></a>
+        <a class="rounded"><i class="fa-brands fa-twitter"></i></a>
+        <a class="rounded"><i class="fa-brands fa-instagram"></i></a>
+        <a class="rounded"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <p class="par-free text-black-50 m-0" >FREE SHIPPING THIS WEEK ORDER OVER - $55</p>
+      <div class="input-form d-flex align-items-center gap-2">
+        <select id="" class="d-none d-lg-block">
+          <option value="">USD $</option>
+          <option value="">EUR €</option>
+        </select>
+        <button type="button" class="btn" id="btn-click" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
+        <p class="welcomeHello mb-0 ms-3" style="display: none; " >Welcome: <span class="fs-5" style="color: var(--main-color); font-weight: bold;"></span></p>
+      </div>
+    </div>
+  </nav>
+  <div class="header border-bottom border-gray">
+    <div class="container px-2 py-4 ">
+      <div class="row w-100 d-flex align-items-center justify-content-between">
+        <div class="image col-2 ">
+          <img src="images/logo.svg" alt="" style="width: 120px;">
+        </div>
+        <div class="input-prodect col-7 position-relative">
+          <input class="w-100 p-2 border rounded-2" type="text" placeholder="Enter yout prodect name...">
+          <span><i class="fa-solid fa-magnifying-glass "></i></span>
+        </div>
+        <div class="prodect-icon d-lg-flex align-items-center justify-content-end  fs-2 col ms-2">
+          <span><i class="fa-regular fa-user"></i></span>
+          <span>
+            <i class="fa-regular fa-heart "></i>
+            <div class="active">0</div>
+          </span>
+          <span>
+            <i class="fa-solid fa-bag-shopping "></i>
+            <div class="active">0</div>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-show">
+    <div class="container">
+      <ul class="ul-container position-relative">
+        <li>
+          <a href="Home">Home</a>
+        </li>
+        <li class="a-categories">
+          <a href="CATEGORIES">CATEGORIES</a>
+          <div class="drop-down position-absolute w-100 bg-white p-4 shadow  bg-body-tertiary" >
+            <div class="row w-100">
+              <div class="box col-3">
+                <h6>Electronics</h6>
+                <ul class="py-2 d-flex flex-column gap-2 text-start p-0">
+                  <li>Desktop</li>
+                  <li>Laptop</li>
+                  <li>Camera</li>
+                  <li>Headphone</li>
+                </ul>
+                <div class="image">
+                  <img class="w-100 mt-2 rounded-2" src="images/homePage/electronics-banner-1.jpg" alt="">
+                </div>
+              </div>
+              <div class="box col-3">
+                <h6>Men's</h6>
+                <ul class="py-2 d-flex flex-column gap-2 text-start p-0">
+                  <li>Desktop</li>
+                  <li>Laptop</li>
+                  <li>Camera</li>
+                  <li>Headphone</li>
+                </ul>
+                <div class="image">
+                  <img class="w-100 mt-2 rounded-2" src="images/homePage//mens-banner.jpg" alt="">
+                </div>
+              </div>
+              <div class="box col-3">
+                <h6>Women's</h6>
+                <ul class="py-2 d-flex flex-column gap-2 text-start p-0">
+                  <li>Desktop</li>
+                  <li>Laptop</li>
+                  <li>Camera</li>
+                  <li>Headphone</li>
+                </ul>
+                <div class="image">
+                  <img class="w-100 mt-2 rounded-2" src="images/homePage/womens-banner.jpg" alt="">
+                </div>
+              </div>
+              <div class="box col-3">
+                <h6>Electronics</h6>
+                <ul class="py-2 d-flex flex-column gap-2 text-start p-0">
+                  <li>Desktop</li>
+                  <li>Laptop</li>
+                  <li>Camera</li>
+                  <li>Headphone</li>
+                </ul>
+                <div class="image">
+                  <img class="w-100 mt-2 rounded-2" src="images/homePage/electronics-banner-2.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="a-mens position-relative">
+          <a href="MEN'S">MEN'S</a>
+          <div class="div-mens position-absolute">
+            <ul class="d-flex flex-column gap-2 text-start bg-white shadow bg-body-tertiary">
+              <li>Shirt</li>
+              <li>Short & Jeans</li>
+              <li>Safety Shose</li>
+              <li>Wakket</li>
+            </ul>
+          </div>
+        </li>
+        <li class="a-mens position-relative">
+          <a href="WOMEN'S">WOMEN'S</a>
+          <div class="div-mens position-absolute">
+            <ul class="d-flex flex-column gap-2 text-start bg-white shadow bg-body-tertiary">
+              <li>Dress & frock</li>
+              <li>Earrings</li>
+              <li>Necklace</li>
+              <li>Makoup Kit</li>
+            </ul>
+          </div>
+        </li>
+        <li class="a-mens position-relative">
+          <a href="JEWELRY">JEWELRY</a>
+          <div class="div-mens position-absolute">
+            <ul class="d-flex flex-column gap-2 text-start bg-white shadow bg-body-tertiary">
+              <li>Earrings</li>
+              <li>Couple Rings</li>
+              <li>Necklace</li>
+              <li>Bracilete</li>
+            </ul>
+          </div>
+        </li>
+        <li class="a-mens position-relative">
+          <a href="PERFUME">PERFUME</a>
+          <div class="div-mens position-absolute">
+            <ul class="d-flex flex-column gap-2 text-start bg-white shadow bg-body-tertiary">
+              <li>Clothes Perfurm</li>
+              <li>Deodorant</li>
+              <li>Flower Fragrance</li>
+              <li>Air Freshener</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="BLOG">BLOG</a>
+        </li>
+        <li>
+          <a href="HOT OFFERS">HOT OFFERS</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="trending">
+    <div class="container " >
+      <div class="box">
+        <span onclick="ClickRight()" class="box-span right"><i class="fa-solid fa-chevron-right "></i></span>
+        <span onclick="ClickLeft()" class="box-span left"><i class="fa-solid fa-chevron-left "></i></span>
+        <div class="content-tranding one">
+          <img class="w-100 rounded-2" src="images/content/banner-1.jpg" style="height: 380px;" alt="">
+          <div class="content">
+            <p class="trending-items">Trending Item</p>
+            <h1>WOMEN'S LATEST FASHION SALE</h1>
+            <p class="price">starting at $ <span>20</span>.00</p>
+            <div class="main-btn">Shop Now</div>
+          </div>
+        </div>
+        <div class="content-tranding two" >
+          <img class="w-100  rounded-2" src="images/content/banner-2.jpg" style="height: 380px;" alt="">
+          <div class="content">
+            <p class="trending-items">Trending Accessories</p>
+            <h1>MODERN SUNGLASSES</h1>
+            <p class="price">starting at $ <span>15</span>.00</p>
+            <div class="main-btn">Shop Now</div>
+          </div>
+        </div>
+        <div class="content-tranding three">
+          <img class="w-100  rounded-2" src="images/content/banner-3.jpg" style="height: 380px;" alt="">
+          <div class="content">
+            <p class="trending-items">Sale Offer</p>
+            <h1>NEW FASHION SUMMER SALE</h1>
+            <p class="price">starting at $ <span>29</span>.99</p>
+            <div class="main-btn">Shop Now</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="show-prodect my-5">
+    <div class="container">
+      <div class="prodect d-flex align-items-center ">
+        <!-- col-lg-3 col-md-4 col-sm-8 -->
+        <div class="box-prodect border rounded-2  d-flex justify-content-between p-3">
+          <div class="content d-flex align-items-center">
+            <div class="image me-3">
+              <img src="images/Prodect/dress.svg" alt="" style="width: 30px; height: 30px;">
+            </div>
+            <div class="info">
+              <p>DRESS & FROCK</p>
+              <span class="d-flex">Show All</span>
+            </div>
+          </div>
+          <div class="code">(53)</div>
+        </div>
+        <div class="box-prodect border rounded-2   d-flex justify-content-between p-3">
+          <div class="content d-flex align-items-center">
+            <div class="image me-3">
+              <img src="images/Prodect/coat.svg" alt="" style="width: 30px; height: 30px;">
+            </div>
+            <div class="info">
+              <p>WINTER WEAR</p>
+              <span class="d-flex">Show All</span>
+            </div>
+          </div>
+          <div class="code">(53)</div>
+        </div>
+        <div class="box-prodect border rounded-2   d-flex justify-content-between p-3">
+          <div class="content d-flex align-items-center">
+            <div class="image me-3">
+              <img src="images/Prodect/glasses.svg" alt="" style="width: 30px; height: 30px;">
+            </div>
+            <div class="info">
+              <p>GLASSES & LENS</p>
+              <span class="d-flex">Show All</span>
+            </div>
+          </div>
+          <div class="code">(68)</div>
+        </div>
+        <div class="box-prodect border rounded-2   d-flex justify-content-between p-3">
+          <div class="content d-flex align-items-center">
+            <div class="image me-3">
+              <img src="images/Prodect/shorts.svg" alt="" style="width: 30px; height: 30px;">
+            </div>
+            <div class="info">
+              <p>SHORTS & JEANS</p>
+              <span class="d-flex">Show All</span>
+            </div>
+          </div>
+          <div class="code">(84)</div>
+        </div>
+        <div class="box-prodect border rounded-2   d-flex justify-content-between p-3">
+          <div class="content d-flex align-items-center">
+            <div class="image me-3">
+              <img src="images/Prodect/tee.svg" alt="" style="width: 30px; height: 30px;">
+            </div>
+            <div class="info">
+              <p>T-SHIRTSK</p>
+              <span class="d-flex">Show All</span>
+            </div>
+          </div>
+          <div class="code">(35)</div>
+        </div>
+        <div class="box-prodect border rounded-2   d-flex justify-content-between p-3">
+          <div class="content d-flex align-items-center">
+            <div class="image me-3">
+              <img src="images/Prodect/jacket.svg" alt="" style="width: 30px; height: 30px;">
+            </div>
+            <div class="info">
+              <p>JACKET</p>
+              <span class="d-flex">Show All</span>
+            </div>
+          </div>
+          <div class="code">(16)</div>
+        </div>
+        <div class="box-prodect border rounded-2  d-flex justify-content-between p-3">
+          <div class="content d-flex align-items-center">
+            <div class="image me-3">
+              <img src="images/Prodect/watch.svg" alt="" style="width: 30px; height: 30px;">
+            </div>
+            <div class="info">
+              <p>WATCH</p>
+              <span class="d-flex">Show All</span>
+            </div>
+          </div>
+          <div class="code">(27)</div>
+        </div>
+        <div class="box-prodect border rounded-2   d-flex justify-content-between p-3">
+          <div class="content d-flex align-items-center">
+            <div class="image me-3">
+              <img src="images/Prodect/hat.svg" alt="" style="width: 30px; height: 30px;">
+            </div>
+            <div class="info">
+              <p>HAT & CAPS</p>
+              <span class="d-flex">Show All</span>
+            </div>
+          </div>
+          <div class="code">(39)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-prodect">
+    <div class="container d-flex gap-4">
+      <div class="container-left">
+        <div class="category">
+          <h3>Category</h3>
+          <ul>
+            <li>
+              <div class="content num-1" onclick = showProdect(1)>
+                <div class="cate">
+                  <img src="images/Category/dress (1).svg" alt="">
+                  <p>Clothes</p>
+                </div>
+                <div class="icon"><i class="fa-solid fa-plus sign "></i></div>
+              </div>
+              <div class="show-prodects">
+                <div class="pro">
+                  <p>Shirt</p>
+                  <span>300</span>
+                </div>
+                <div class="pro">
+                  <p>shorts & Jeans</p>
+                  <span>60</span>
+                </div>
+                <div class="pro">
+                  <p>Jacket</p>
+                  <span>50</span>
+                </div>
+                <div class="pro">
+                  <p>Dress & Frock</p>
+                  <span>87</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="content num-2" onclick = showProdect(2)>
+                <div class="cate">
+                  <img src="images/Category/shoes.svg" alt="">
+                  <p>FootWear</p>
+                </div>
+                <div class="icon"><i class="fa-solid fa-plus sign "></i></div>
+              </div>
+              <div class="show-prodects">
+                <div class="pro">
+                  <p>Shirt</p>
+                  <span>300</span>
+                </div>
+                <div class="pro">
+                  <p>shorts & Jeans</p>
+                  <span>60</span>
+                </div>
+                <div class="pro">
+                  <p>Jacket</p>
+                  <span>50</span>
+                </div>
+                <div class="pro">
+                  <p>Dress & Frock</p>
+                  <span>87</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="content num-3" onclick = showProdect(3)>
+                <div class="cate">
+                  <img src="images/Category/jewelry.svg" alt="">
+                  <p>Jewelry</p>
+                </div>
+              <div class="icon"><i class="fa-solid fa-plus sign "></i></div>
+              </div>
+              <div class="show-prodects">
+                <div class="pro">
+                  <p>Shirt</p>
+                  <span>300</span>
+                </div>
+                <div class="pro">
+                  <p>shorts & Jeans</p>
+                  <span>60</span>
+                </div>
+                <div class="pro">
+                  <p>Jacket</p>
+                  <span>50</span>
+                </div>
+                <div class="pro">
+                  <p>Dress & Frock</p>
+                  <span>87</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="content num-4" onclick = showProdect(4)>
+                <div class="cate">
+                  <img src="images/Category/perfume.svg" alt="">
+                  <p>Perfurm</p>
+                </div>
+                <div class="icon"><i class="fa-solid fa-plus sign "></i></div>
+              </div>
+              <div class="show-prodects">
+                <div class="pro">
+                  <p>Shirt</p>
+                  <span>300</span>
+                </div>
+                <div class="pro">
+                  <p>shorts & Jeans</p>
+                  <span>60</span>
+                </div>
+                <div class="pro">
+                  <p>Jacket</p>
+                  <span>50</span>
+                </div>
+                <div class="pro">
+                  <p>Dress & Frock</p>
+                  <span>87</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="content num-5" onclick = showProdect(5)>
+                <div class="cate">
+                  <img src="images/Category/cosmetics.svg" alt="">
+                  <p>Cosmetice</p>
+                </div>
+                <div class="icon"><i class="fa-solid fa-plus sign "></i></div>
+              </div>
+              <div class="show-prodects">
+                <div class="pro">
+                  <p>Shirt</p>
+                  <span>300</span>
+                </div>
+                <div class="pro">
+                  <p>shorts & Jeans</p>
+                  <span>60</span>
+                </div>
+                <div class="pro">
+                  <p>Jacket</p>
+                  <span>50</span>
+                </div>
+                <div class="pro">
+                  <p>Dress & Frock</p>
+                  <span>87</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="content num-6" onclick = showProdect(6)>
+                <div class="cate">
+                  <img src="images/Category/glasses.svg" alt="">
+                  <p>Galsses</p>
+                </div>
+                <div class="icon"><i class="fa-solid fa-plus sign "></i></div>
+              </div>
+              <div class="show-prodects">
+                <div class="pro">
+                  <p>Shirt</p>
+                  <span>300</span>
+                </div>
+                <div class="pro">
+                  <p>shorts & Jeans</p>
+                  <span>60</span>
+                </div>
+                <div class="pro">
+                  <p>Jacket</p>
+                  <span>50</span>
+                </div>
+                <div class="pro">
+                  <p>Dress & Frock</p>
+                  <span>87</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="content num-7" onclick = showProdect(7)>
+                <div class="cate">
+                  <img src="images/Category/bag.svg" alt="">
+                  <p>Bage</p>
+                </div>
+                <!-- <i class="fa-solid fa-minus sign "></i> -->
+                <div class="icon"><i class="fa-solid fa-plus sign "></i></div>
+              </div>
+              <div class="show-prodects">
+                <div class="pro">
+                  <p>Shirt</p>
+                  <span>300</span>
+                </div>
+                <div class="pro">
+                  <p>shorts & Jeans</p>
+                  <span>60</span>
+                </div>
+                <div class="pro">
+                  <p>Jacket</p>
+                  <span>50</span>
+                </div>
+                <div class="pro">
+                  <p>Dress & Frock</p>
+                  <span>87</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="best-sellers mt-5">
+          <h2 class="fs-5">BEST SELLERS</h2>
+          <div class="show-content">
+            <div class="box">
+              <div class="image">
+                <img src="images/sellers/1.jpg" alt="">
+              </div>
+              <div class="info">
+                <p>Baby Fabric Shoes</p>
+                <div class="icons d-flex align-items-center" style="color: hsl(29, 90%, 65%);">
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                </div>
+                <div class="price">
+                  <p>$5.00</p>
+                  <span>$4.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="image">
+                <img src="images/sellers/2.jpg" alt="">
+              </div>
+              <div class="info">
+                <p>Men's Hoodies T-Shirt</p>
+                <div class="icons d-flex align-items-center" style="color: hsl(29, 90%, 65%);">
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                </div>
+                <div class="price">
+                  <p>$17.00</p>
+                  <span>$7.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="image">
+                <img src="images/sellers/3.jpg" alt="">
+              </div>
+              <div class="info">
+                <p>Girls T-Shirt</p>
+                <div class="icons d-flex align-items-center" style="color: hsl(29, 90%, 65%);">
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                </div>
+                <div class="price">
+                  <p>$6.00</p>
+                  <span>$2.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="image">
+                <img src="images/sellers/4.jpg" alt="">
+              </div>
+              <div class="info">
+                <p>Woolen Hat For Men</p>
+                <div class="icons d-flex align-items-center" style="color: hsl(29, 90%, 65%);">
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                </div>
+                <div class="price">
+                  <p>$15.00</p>
+                  <span>$10.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="image">
+                <img src="images/sellers/3.jpg" alt="">
+              </div>
+              <div class="info">
+                <p>Girls T-Shirt</p>
+                <div class="icons d-flex align-items-center" style="color: hsl(29, 90%, 65%);">
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                </div>
+                <div class="price">
+                  <p>$5.00</p>
+                  <span>$4.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="image">
+                <img src="images/sellers/1.jpg" alt="">
+              </div>
+              <div class="info">
+                <p>Baby Fabric Shoes</p>
+                <div class="icons d-flex align-items-center" style="color: hsl(29, 90%, 65%);">
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                </div>
+                <div class="price">
+                  <p>$5.00</p>
+                  <span>$4.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="image">
+                <img src="images/sellers/2.jpg" alt="">
+              </div>
+              <div class="info">
+                <p>BEST SELLERS</p>
+                <div class="icons d-flex align-items-center" style="color: hsl(29, 90%, 65%);">
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                </div>
+                <div class="price">
+                  <p>$33.00</p>
+                  <span>$20.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="image">
+                <img src="images/sellers/4.jpg" alt="">
+              </div>
+              <div class="info">
+                <p>BEST SELLERS</p>
+                <div class="icons d-flex align-items-center" style="color: hsl(29, 90%, 65%);">
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                  <span><i class="fa fa-star"></i></span>
+                </div>
+                <div class="price">
+                  <p>$33.00</p>
+                  <span>$20.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-right w-100">
+        <div class="prodect-arrivals row">
+          <div class="arrival  col-lg-4 col-md-6">
+            <div class="title w-100 pb-2 border-bottom">
+              <h2 class="fs-5">New Arrivals</h2>
+            </div>
+            <div class="prodect-content ">
+              <div class="box">
+                <img src="images/show//clothes-1.jpg" alt="" style="width: 70px;">
+                <div class="info">
+                  <p class="par">Relaxed Short Full </p>
+                  <a href="Clothes">Clothes</a>
+                  <div class="price d-flex">
+                    <p>$45.00</p>
+                    <span>$12.00</span>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <img src="images/show/clothes-2.jpg" alt="" style="width: 70px;">
+                <div class="info">
+                  <p class="par">Girls Pnk Embro Desig </p>
+                  <a href="Clothes">Clothes</a>
+                  <div class="price d-flex">
+                    <p>$61.00</p>
+                    <span>$9.00</span>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <img src="images/show/clothes-3.jpg" alt="" style="width: 70px;">
+                <div class="info">
+                  <p class="par">Black Floral Wrap Midi </p>
+                  <a href="Clothes">Clothes</a>
+                  <div class="price d-flex">
+                    <p>$76.00</p>
+                    <span>$25.00</span>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <img src="images/show/shirt-1.jpg" alt="" style="width: 70px;">
+                <div class="info">
+                  <p class="par">Pure Garment Dyed </p>
+                  <a href="Clothes">Clothes</a>
+                  <div class="price d-flex">
+                    <p>$68.00</p>
+                    <span>$31.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="arrival sport  col-lg-4 col-md-6">
+            <div class="title w-100 pb-2 border-bottom">
+              <h2 class="fs-5">Trending</h2>
+            </div>
+            <div class="prodect-content ">
+              <div class="box">
+                <img src="images/show//sport/sports-1.jpg" alt="" style="width: 70px;">
+                <div class="info">
+                  <p class="par">Running & Trekking</p>
+                  <a href="Clothes">Sports</a>
+                  <div class="price d-flex">
+                    <p>$49.00</p>
+                    <span>$15.00</span>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <img src="images/show/sport/sports-2.jpg" alt="" style="width: 70px;">
+                <div class="info">
+                  <p class="par">Trekking & Running</p>
+                  <a href="Clothes">Sports</a>
+                  <div class="price d-flex">
+                    <p>$78.00</p>
+                    <span>$36.00</span>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <img src="images/show/sport/sports-3.jpg" alt="" style="width: 70px;">
+                <div class="info">
+                  <p class="par">Womens Party Wear</p>
+                  <a href="Clothes">Party Wear</a>
+                  <div class="price d-flex">
+                    <p>$94.00</p>
+                    <span>$25.00</span>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <img src="images/show/sport/party-wear-1.jpg" alt="" style="width: 70px;">
+                <div class="info">
+                  <p class="par">Sports Claw Women's </p>
+                  <a href="Clothes">Clothes</a>
+                  <div class="price d-flex">
+                    <p>$54.00</p>
+                    <span>$65.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="arrival col-lg-4 col-md-6">
+            <div class="title w-100 pb-2 border-bottom">
+              <h2 class="fs-5">New Arrivals</h2>
+            </div>
+            <div class="prodect-content ">
+              <div class="box">
+                <img src="images/show/rated/watch-3.jpg" alt="" style="width: 70px;">
+                <div class="info">
+                  <p class="par">Pocket Watch Leather </p>
+                  <a href="Clothes">Watches</a>
+                  <div class="price d-flex">
+                    <p>$50.00</p>
+                    <span>$34.00</span>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <img src="images/show/rated/perfume.jpg" alt="" style="width: 70px;">
+                <div class="info">
+                  <p class="par">Silver Deer Heart Neckl </p>
+                  <a href="Clothes">Jewellery</a>
+                  <div class="price d-flex">
+                    <p>$84.00</p>
+                    <span>$30.00</span>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <img src="images/show//rated/belt.jpg" alt="" style="width: 70px;">
+                <div class="info">
+                  <p class="par">Titan 100 Ml Womens </p>
+                  <a href="Clothes">Perfume</a>
+                  <div class="price d-flex">
+                    <p>$33.00</p>
+                    <span>$54.00</span>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <img src="images/show/rated/jewellery-3.jpg" alt="" style="width: 70px;">
+                <div class="info">
+                  <p class="par">Pure Garment Dyed </p>
+                  <a href="Clothes">Perfume</a>
+                  <div class="price d-flex">
+                    <p>$55.00</p>
+                    <span>$31.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="prodect-deal w-100">
+          <div class="title w-100 pb-2 my-4">
+            <h2 class="fs-5 pb-3 border-bottom">Deal Of The Day</h2>
+          </div>
+          <div class="show-prodects mb-4 position-relative">
+            <span onclick="ClickRightTwo()" class="box-span right"><i class="fa-solid fa-chevron-right "></i></span>
+            <span onclick="ClickLefttTwo()" class="box-span left"><i class="fa-solid fa-chevron-left "></i></span>
+            <div class="content-prodect show border rounded-2">
+              <div class="box-prodect d-flex p-4 ">
+                <img src="images/showcase/shampoo.jpg" alt="">
+                <div class="content-title">
+                  <div class="icons d-flex align-items-center" style="color: hsl(29, 90%, 65%);">
+                    <span><i class="fa fa-star"></i></span>
+                    <span><i class="fa fa-star"></i></span>
+                    <span><i class="fa fa-star"></i></span>
+                    <span><i class="fa-regular fa-star"></i></span>
+                    <span><i class="fa-regular fa-star"></i></span>
+                  </div>
+                  <h3>SHAMPOO, CONDITIONER & FACEWASH PACKS</h3>
+                  <p class="lore">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor dolor sit amet consectetur Lorem ipsum dolor</p>
+                  <div class="price">
+                    <p class="fs-3">$150.00</p>
+                    <span class="fs-4">$200.00</span>
+                  </div>
+                  <div class="main-btn">ADD TO CART</div>
+                  <div class="avalable d-flex justify-content-between mt-3">
+                    <p>ALREADY SOLD: <span>20</span></p>
+                    <p>AVAILABLE:  <span>40</span></p>
+                  </div>
+                  <div class="average w-100 rounded-2 d-flex align-items-center ps-2" style="background-color: hsl(0, 0%, 93%); height: 10px;">
+                    <div class="aver rounded-2" style="width: 40%; background-color: var(--main-color); height: 5px;"></div>
+                  </div>
+                  <div class="count mt-3">
+                    <p>HURRY UP! OFFER ENDS IN:</p>
+                    <div class="days d-flex gap-3 align-items-center">
+                      <div class="box">
+                        <p class="">360</p>
+                        <span class="d-block">Day</span>
+                      </div>
+                      <div class="box">
+                        <p class="">24</p>
+                        <span class="d-block">Hours</span>
+                      </div>
+                      <div class="box">
+                        <p class="">49</p>
+                        <span class="d-block">min</span>
+                      </div>
+                      <div class="box">
+                        <p class="">00</p>
+                        <span class="d-block">sec</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-prodect hidden border rounded-2">
+              <div class="box-prodect d-flex p-4 ">
+                <img src="images/showcase/jewellery-1.jpg" alt="">
+                <div class="content-title">
+                  <div class="icons d-flex align-items-center" style="color: hsl(29, 90%, 65%);">
+                    <span><i class="fa fa-star"></i></span>
+                    <span><i class="fa fa-star"></i></span>
+                    <span><i class="fa fa-star"></i></span>
+                    <span><i class="fa-regular fa-star"></i></span>
+                    <span><i class="fa-regular fa-star"></i></span>
+                  </div>
+                  <h3>ROSE GOLD DIAMONDS EARRING</h3>
+                  <p class="lore">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor dolor sit amet consectetur Lorem ipsum dolor</p>
+                  <div class="price">
+                    <p class="fs-3">$1990.00</p>
+                    <span class="fs-4">$2000.00</span>
+                  </div>
+                  <div class="main-btn">ADD TO CART</div>
+                  <div class="avalable d-flex justify-content-between mt-3">
+                    <p>ALREADY SOLD: <span>20</span></p>
+                    <p>AVAILABLE:  <span>40</span></p>
+                  </div>
+                  <div class="average w-100 rounded-2 d-flex align-items-center ps-2" style="background-color: hsl(0, 0%, 93%); height: 10px;">
+                    <div class="aver rounded-2" style="width: 40%; background-color: var(--main-color); height: 5px;"></div>
+                  </div>
+                  <div class="count mt-3">
+                    <p>HURRY UP! OFFER ENDS IN:</p>
+                    <div class="days d-flex gap-3 align-items-center">
+                      <div class="box">
+                        <p class="">360</p>
+                        <span class="d-block">Day</span>
+                      </div>
+                      <div class="box">
+                        <p class="">24</p>
+                        <span class="d-block">Hours</span>
+                      </div>
+                      <div class="box">
+                        <p class="">49</p>
+                        <span class="d-block">min</span>
+                      </div>
+                      <div class="box">
+                        <p class="">00</p>
+                        <span class="d-block">sec</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container  container-margin">
+    <div class="main-title">
+      <p>New Products</p>
+    </div>
+    <div class="new-prodect  gap">
+      <div class="showcases border rounded-4 position-relative col-lg-3">
+        <div class="imagecase ">
+          <p class="par">15%</p>
+          <img class="one" src="images/contentShow/jacket-3.jpg" alt="">
+          <img class="two" src="images/contentShow/image/jacket-4.jpg" alt="">
+        </div>
+        <div class="content">
+          <span class="namecon">JACKET</span>
+          <p class="titlecon">Mens Winter Leathers Full-Zip Jackets</p>
+          <div class="icons d-flex align-items-center my-1" style="color: hsl(29, 90%, 65%);">
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+          </div>
+          <div class="price d-flex gap-3 ">
+            <p>$48.00</p>
+            <span>$75.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="showcases border rounded-4 position-relative col-lg-3">
+        <div class="imagecase ">
+          <div class="mark">Sale</div>
+          <img class="one" src="images/contentShow/shirt-1.jpg" alt="">
+          <img class="two" src="images/contentShow/image/shirt-2.jpg" alt="">
+        </div>
+        <div class="content">
+          <span class="namecon">SHIRT</span>
+          <p class="titlecon">Pure Garment Dyed Cotton Shirt</p>
+          <div class="icons d-flex align-items-center my-1" style="color: hsl(29, 90%, 65%);">
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+          </div>
+          <div class="price d-flex gap-3 ">
+            <p>$45.00</p>
+            <span>$56.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="showcases border rounded-4 position-relative col-lg-3">
+        <div class="imagecase ">
+          
+          <img class="one" src="images/contentShow/jacket-5.jpg" alt="">
+          <img class="two" src="images/contentShow/image/jacket-6.jpg" alt="">
+        </div>
+        <div class="content">
+          <span class="namecon">JACKET</span>
+          <p class="titlecon">MEN Yarn Fleece Full-Zip Jacket</p>
+          <div class="icons d-flex align-items-center my-1" style="color: hsl(29, 90%, 65%);">
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+          </div>
+          <div class="price d-flex gap-3 ">
+            <p>$58.00</p>
+            <span>$65.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="showcases border rounded-4 position-relative col-lg-3">
+        <div class="imagecase ">
+          <div class="mark" style="background-color: var(--main-color);">New</div>
+          <img class="one" src="images/contentShow/clothes-3.jpg" alt="">
+          <img class="two" src="images/contentShow/image/clothes-4.jpg" alt="">
+        </div>
+        <div class="content">
+          <span class="namecon">SKIRT</span>
+          <p class="titlecon">Black Floral Wrap Midi Skirt</p>
+          <div class="icons d-flex align-items-center my-1" style="color: hsl(29, 90%, 65%);">
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+          </div>
+          <div class="price d-flex gap-3 ">
+            <p>$48.00</p>
+            <span>$75.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="showcases border rounded-4 position-relative col-lg-3">
+        <div class="imagecase ">
+          
+          <img class="one" src="images/contentShow/shoe-2.jpg" alt="">
+          <img class="two" src="images/contentShow/image/shoe-2_1.jpg" alt="">
+        </div>
+        <div class="content">
+          <span class="namecon">CASUAL</span>
+          <p class="titlecon">Casual Men's Brown Shoes</p>
+          <div class="icons d-flex align-items-center my-1" style="color: hsl(29, 90%, 65%);">
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+          </div>
+          <div class="price d-flex gap-3 ">
+            <p>$99.00</p>
+            <span>$105.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="showcases border rounded-4 position-relative col-lg-3">
+        <div class="imagecase ">
+          <div class="mark">Sale</div>
+          <img class="one" src="images/contentShow/watch-3.jpg" alt="">
+          <img class="two" src="images/contentShow/image/watch-4.jpg" alt="">
+        </div>
+        <div class="content">
+          <span class="namecon">WATCHES</span>
+          <p class="titlecon">Pocket Watch Leather Pouch</p>
+          <div class="icons d-flex align-items-center my-1" style="color: hsl(29, 90%, 65%);">
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+          </div>
+          <div class="price d-flex gap-3 ">
+            <p>$150.00</p>
+            <span>$170.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="showcases border rounded-4 position-relative col-lg-3">
+        <div class="imagecase ">
+          
+          <img class="one" src="images/contentShow/watch-1.jpg" alt="">
+          <img class="two" src="images/contentShow/image/watch-2.jpg" alt="">
+        </div>
+        <div class="content">
+          <span class="namecon">WATCHES</span>
+          <p class="titlecon">Smart Watche Vital Plus</p>
+          <div class="icons d-flex align-items-center my-1" style="color: hsl(29, 90%, 65%);">
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+          </div>
+          <div class="price d-flex gap-3 ">
+            <p>$100.00</p>
+            <span>$120.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="showcases border rounded-4 position-relative col-lg-3">
+        <div class="imagecase ">
+          <div class="mark">sale</div>
+          <img class="one" src="images/contentShow/party-wear-1.jpg" alt="">
+          <img class="two" src="images/contentShow/image/party-wear-2.jpg" alt="">
+        </div>
+        <div class="content">
+          <span class="namecon">PARTY WEAR</span>
+          <p class="titlecon">Womens Party Wear Shoes</p>
+          <div class="icons d-flex align-items-center my-1" style="color: hsl(29, 90%, 65%);">
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+          </div>
+          <div class="price d-flex gap-3 ">
+            <p>$25.00</p>
+            <span>$30.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="showcases border rounded-4 position-relative col-lg-3">
+        <div class="imagecase ">
+          
+          <img class="one" src="images/contentShow/jacket-1.jpg" alt="">
+          <img class="two" src="images/contentShow/image/jacket-2.jpg" alt="">
+        </div>
+        <div class="content">
+          <span class="namecon">JACKET</span>
+          <p class="titlecon">Mens Winter Leathers Jackets</p>
+          <div class="icons d-flex align-items-center my-1" style="color: hsl(29, 90%, 65%);">
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+          </div>
+          <div class="price d-flex gap-3 ">
+            <p>$32.00</p>
+            <span>$45.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="showcases border rounded-4 position-relative col-lg-3">
+        <div class="imagecase ">
+          <div class="mark">sale</div>
+          <img class="one" src="images/contentShow/sports-2.jpg" alt="">
+          <img class="two" src="images/contentShow/image/sports-4.jpg" alt="">
+        </div>
+        <div class="content">
+          <span class="namecon">Sports</span>
+          <p class="titlecon">Trekking & Running Shoes - Black</p>
+          <div class="icons d-flex align-items-center my-1" style="color: hsl(29, 90%, 65%);">
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+          </div>
+          <div class="price d-flex gap-3 ">
+            <p>$58.00</p>
+            <span>$64.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="showcases border rounded-4 position-relative col-lg-3">
+        <div class="imagecase ">
+          
+          <img class="one" src="images/contentShow/shoe-1.jpg" alt="">
+          <img class="two" src="images/contentShow/image/shoe-1_1.jpg" alt="">
+        </div>
+        <div class="content">
+          <span class="namecon">FORMAL</span>
+          <p class="titlecon">Men's Leather Formal Wear Shoes</p>
+          <div class="icons d-flex align-items-center my-1" style="color: hsl(29, 90%, 65%);">
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+          </div>
+          <div class="price d-flex gap-3 ">
+            <p>$25.00</p>
+            <span>$30.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="showcases border rounded-4 position-relative col-lg-3">
+        <div class="imagecase ">
+          <div class="mark">sale</div>
+          <img class="one" src="images/contentShow/shorts-1.jpg" alt="">
+          <img class="two" src="images/contentShow/image/shorts-2.jpg" alt="">
+        </div>
+        <div class="content">
+          <span class="namecon">Sports</span>
+          <p class="titlecon">Better Basics French Terry Sweatshorts</p>
+          <div class="icons d-flex align-items-center my-1" style="color: hsl(29, 90%, 65%);">
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+          </div>
+          <div class="price d-flex gap-3 ">
+            <p>$78.00</p>
+            <span>$85.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-4">
+    <div class="testimonial">
+      <div class="founder">
+        <div class="main-title">
+          <p class="mx-0">New Products</p>
+        </div>
+        <div class="container-founder">
+          <img src="images/founder/testimonial-1.jpg" alt="">
+          <p class="name">ALAN DOE</p>
+          <p class="title">CEO & Founder Invision</p>
+          <img class="quote" src="images/founder/quotes.svg" alt="">
+          <p class="lorem">Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor dolor sit amet.</p>
+        </div>
+      </div>
+      <div class="image-founder">
+        <img src="images/founder/cta-banner.jpg" alt="">
+        <div class="content">
+          <div class="discount">
+            25% DisCount
+          </div>
+          <p class="summer">Summer Collection</p>
+          <div class="start">Starting @ $10</div>
+          <p class="shop">Shop Now</p>
+        </div>
+      </div>
+      <div class="services">
+        <div class="main-title">
+          <p class="mx-0">New Products</p>
+        </div>
+        <div class="box-services">
+          <div class="box">
+            <span class="icon"><i class="fa-solid fa-ship"></i></span>
+            <div class="info">
+              <p class="title">Worldwide Delivery</p>
+              <span class="con">For Order Over $100</span>
+            </div>
+          </div>
+          <div class="box">
+            <span class="icon"><i class="fa-solid fa-rocket"></i></span>
+            <div class="info">
+              <p class="title">Next Day Delivery</p>
+              <span class="con">UK Orders Only</span>
+            </div>
+          </div>
+          <div class="box">
+            <span class="icon"><i class="fa-solid fa-phone"></i></span>
+            <div class="info">
+              <p class="title">Best Online Support</p>
+              <span class="con">Hours: 8AM - 11PM</span>
+            </div>
+          </div>
+          <div class="box">
+            <span class="icon"><i class="fa-solid fa-share"></i></span>
+            <div class="info">
+              <p class="title">Return Policy</p>
+              <span class="con">Easy & Free Return</span>
+            </div>
+          </div>
+          <div class="box">
+            <span class="icon"><i class="fa-solid fa-ticket"></i></span>
+            <div class="info">
+              <p class="title">30% Money Back</p>
+              <span class="con">For Order Over $100</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container my-5">
+    <div class="blog-container ">
+      <div class="blog-box ">
+        <img class="w-100" src="images/blog/blog-1.jpg" alt="">
+        <div class="title">Fashion</div>
+        <p>Clothes Retail KPIs 2021 Guide for Clothes Executives.</p>
+        <span>By Mr Admin / Apr 06, 2022</span>
+      </div>
+      <div class="blog-box ">
+        <img class="w-100" src="images/blog/blog-2.jpg" alt="">
+        <div class="title">Clothes</div>
+        <p>Curbside fashion Trends: How to Win the Pickup Battle.</p>
+        <span>By Mr Robin / Jan 18, 2022</span>
+      </div>
+      <div class="blog-box ">
+        <img class="w-100" src="images/blog/blog-3.jpg" alt="">
+        <div class="title">Shose</div>
+        <p>EBT vendors: Claim Your Share of SNAP Online Revenue.</p>
+        <span>By Mr Selsa / Feb 10, 2022</span>
+      </div>
+      <div class="blog-box ">
+        <img class="w-100" src="images/blog/blog-4.jpg" alt="">
+        <div class="title">Electronics</div>
+        <p>Curbside fashion Trends: How to Win the Pickup Battle.</p>
+        <span>By Mr Pawar / Mar 15, 2022</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container pt-5">
+      <div class="brand ">
+        <h2>BRAND DIRECTORY</h2>
+        <div class="content-brand">
+          <div class="title">FASHION :</div>
+          <a href="">T-Shirt</a>
+          <a href="">Shirts</a>
+          <a href="">Shorts & Jeans</a>
+          <a href="">Jacket</a>
+          <a href="">Dress & Frock</a>
+          <a href="">Innerwear</a>
+          <a href="">Hosiery</a>
+        </div>
+        <div class="content-brand">
+          <div class="title">FOOTWEAR :</div>
+          <a href="">Sport</a>
+          <a href="">Formal</a>
+          <a href="">Boots</a>
+          <a href="">Casual</a>
+          <a href="">Cowboy Shoes</a>
+          <a href="">Safety Shoes</a>
+          <a href="">Party Wear Shoes</a>
+          <a href="">Branded</a>
+          <a href="">Firstcopy</a>
+          <a href="">Long Shoes</a>
+        </div>
+
+        <div class="content-brand">
+          <div class="title">JEWELLERY :</div>
+          <a href="">Necklace</a>
+          <a href="">Earrings</a>
+          <a href="">Couple Rings</a>
+          <a href="">Pendants</a>
+          <a href="">Crystal</a>
+          <a href="">Bangles</a>
+          <a href="">Bracelets</a>
+          <a href="">Nosepin</a>
+          <a href="">Chain</a>
+          <a href="">Earrings</a>
+          <a href="">Couple Rings</a>
+        </div>
+
+        <div class="content-brand">
+          <div class="title">COSMETICS :</div>
+          <a href="">Shampoo</a>
+          <a href="">Bodywash</a>
+          <a href="">Facewash</a>
+          <a href="">Makeup Kit</a>
+          <a href="">Liner</a>
+          <a href="">Lipstick</a>
+          <a href="">Prefume</a>
+          <a href="">Body Soap</a>
+          <a href="">Scrub</a>
+          <a href="">Hair Gel</a>
+          <a href="">Hair Colors</a>
+          <a href="">Hair Dye</a>
+          <a href="">Sunscreen</a>
+          <a href="">Skin Loson</a>
+          <a href="">Liner</a>
+          <a href="">Lipstick</a>
+        </div>
+      </div>
+      <div class="footer-nav ">
+        <div class="box-prodect">
+          <h2>POPULAR CATEGORIES</h2>
+          <ul>
+            <li>Fashion</li>
+            <li>Electronic</li>
+            <li>Cosmetic</li>
+            <li>Health</li>
+            <li>Watches</li>
+          </ul>
+        </div>
+        <div class="box-prodect">
+          <h2>PRODUCTS</h2>
+          <ul>
+            <li>Prices Drop</li>
+            <li>New Products</li>
+            <li>Best Sales</li>
+            <li>Contact Us</li>
+            <li>Sitemap</li>
+          </ul>
+        </div>
+        <div class="box-prodect">
+          <h2>OUR COMPANY</h2>
+          <ul>
+            <li>Delivery</li>
+            <li>Legal Notice</li>
+            <li>Terms And Conditions</li>
+            <li>About Us</li>
+            <li>Secure Payment</li>
+          </ul>
+        </div>
+        <div class="box-prodect">
+          <h2>SERVICES</h2>
+          <ul>
+            <li>Prices Drop</li>
+            <li>New Products</li>
+            <li>Best Sales</li>
+            <li>Contact Us</li>
+            <li>Sitemap</li>
+          </ul>
+        </div>
+        <div class="box-prodect">
+          <h2>CONTACT</h2>
+          <ul>
+            <li class="d-flex gap-2">
+              <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+              <p class="mb-0" style="max-width: 180px;">419 State 414 Rte Beaver Dams, New York(NY), 14812, USA</p>
+            </li>
+            <li class="d-flex gap-2 mb-2">
+              <span class="icon"><i class="fa-solid fa-phone"></i></span>
+              <p style="max-width: 180px;">(607) 936-8058</p>
+            </li>
+            <li class="d-flex gap-2">
+              <span class="icon"><i class="fa-regular fa-envelope"></i></span>
+              <p style="max-width: 180px;">Example@Gmail.Com</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="payment ">
+        <img src="images/footer/payment.png" alt="">
+        <p>Copyright © Anon All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="menu-mobile">
+      <span onclick="showNavbar()" class="active menu"><i class="fa-solid fa-bars"></i></span>
+      <span class="active num"><i class="fa-solid fa-bag-shopping "></i></span>
+      <span class="active"><i class="fa-solid fa-house"></i></span>
+      <span class="active num"><i class="fa-regular fa-heart"></i></span>
+      <span class="active tabled"><i class="fa-solid fa-table-cells-large"></i></span>
+    </div>
+  </div>
+
+
+<div class="navbar-mobile hidden bg-white">
+  <div class="nav">
+    <h4>Menu</h4>
+    <div onclick="hiddenNavBar()" class="close"><i class="fa-solid fa-xmark"></i></div>
+  </div>
+  <ul>
+    <li>Home</li>
+    <li class="drop-down" id="show-1" onclick="showProdectMobial(this.id)">
+      <div class="show-content">
+        Men's
+        <span><i class="fa-solid fa-plus"></i></span>
+      </div>
+      <div class="drop">
+        <span>Shirt</span>
+        <span>Shorts & Jeans</span>
+        <span>Safety Shoes</span>
+        <span>Wallet</span>
+      </div>
+    </li>
+    <li class="drop-down" id="show-2" onclick="showProdectMobial(this.id)">
+      <div class="show-content">
+        Womens's
+        <span><i class="fa-solid fa-plus"></i></span>
+      </div>
+      <div class="drop">
+        <span>Shirt</span>
+        <span>Shorts & Jeans</span>
+        <span>Safety Shoes</span>
+        <span>Wallet</span>
+      </div>
+    </li>
+    <li class="drop-down" id="show-3" onclick="showProdectMobial(this.id)">
+      <div class="show-content">
+        Jewelry
+        <span><i class="fa-solid fa-plus"></i></span>
+      </div>
+      <div class="drop">
+        <span>Shirt</span>
+        <span>Shorts & Jeans</span>
+        <span>Safety Shoes</span>
+        <span>Wallet</span>
+      </div>
+    </li>
+    <li class="drop-down" id="show-4" onclick="showProdectMobial(this.id)">
+      <div class="show-content">
+        Perfume
+        <span><i class="fa-solid fa-plus"></i></span>
+      </div>
+      <div class="drop">
+        <span>Shirt</span>
+        <span>Shorts & Jeans</span>
+        <span>Safety Shoes</span>
+        <span>Wallet</span>
+      </div>
+    </li>
+    <li>Blog</li>
+    <li>Hot Offers</li>
+  </ul>
+
+  <div class="plateform">
+    <li  id="show-plateform-1" onclick="showPlateform(this.id)">
+      <div class="contant">
+        <p>Language</p>
+        <span><i class="fa-solid fa-caret-left"></i></span>
+      </div>
+      <div class="drop">
+        <ul>
+          <li>English</li>
+          <li>Español</li>
+          <li>Frençh</li>
+        </ul>
+      </div>
+    </li>
+    <li  id="show-plateform-2" onclick="showPlateform(this.id)">
+      <div class="contant">
+        <p>Currency</p>
+        <span><i class="fa-solid fa-caret-left"></i></span>
+      </div>
+      <div class="drop">
+        <ul>
+          <li>USD $</li>
+          <li>EUR €</li>
+        </ul>
+      </div>
+    </li>
+  </div>
+</div>
+
+</body>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/all.min.js"></script>
+<script src="js/main.js"></script>
+</html>
